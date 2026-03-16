@@ -70,6 +70,15 @@
       "schema": "public",
       "indexes": [
         {
+          "keyName": "IDX_customer_note_customer_id",
+          "columnNames": [],
+          "composite": false,
+          "constraint": false,
+          "primary": false,
+          "unique": false,
+          "expression": "CREATE INDEX IF NOT EXISTS \"IDX_customer_note_customer_id\" ON \"customer_note\" (\"customer_id\") WHERE deleted_at IS NULL"
+        },
+        {
           "keyName": "IDX_customer_note_deleted_at",
           "columnNames": [],
           "composite": false,
